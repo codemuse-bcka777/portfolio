@@ -140,7 +140,7 @@ const About = () => {
                 {/* Placeholder Content */}
                 <div className="relative z-10 h-full flex flex-col justify-center items-center">
                   <motion.img
-                    src="/profile-pic.png"
+                    src="public/profile-pic.png"
                     alt='Bisika Pant'
                     className="w-4/5 h-4/5 object-cover rounded-xl border-2 border-neon-primary/50"
                     whileHover={{ scale: 1.05 }}
