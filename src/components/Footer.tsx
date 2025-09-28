@@ -51,7 +51,7 @@ const Footer = () => {
 
           {/* Right Side */}
           <div className="flex items-center space-x-4 text-text-primary/60 text-sm font-mono">
-            <span>© 2024</span>
+            <span>© 2025</span>
             <div className="w-px h-4 bg-neon-primary/20"></div>
             <span>Made with</span>
             <motion.div
