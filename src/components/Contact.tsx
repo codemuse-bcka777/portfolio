@@ -104,15 +104,17 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name Input */}
                   <div>
-                    <label className="block text-neon-secondary font-mono text-sm mb-2">
+                    <label htmlFor="name" className="block text-neon-secondary font-mono text-sm mb-2">
                       {'> IDENTIFIER_NAME:'}
                     </label>
                     <input
                       type="text"
+                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      autoComplete="name"
                       className="w-full px-4 py-3 bg-section-bg border-2 border-neon-primary/20 rounded-lg text-text-primary font-mono focus:border-neon-primary/60 focus:outline-none transition-all duration-300"
                       placeholder="Enter your name..."
                     />
@@ -120,15 +122,17 @@ const Contact = () => {
 
                   {/* Email Input */}
                   <div>
-                    <label className="block text-neon-secondary font-mono text-sm mb-2">
+                    <label htmlFor="email" className="block text-neon-secondary font-mono text-sm mb-2">
                       {'> COMMUNICATION_CHANNEL:'}
                     </label>
                     <input
                       type="email"
+                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      autoComplete="email"
                       className="w-full px-4 py-3 bg-section-bg border-2 border-neon-primary/20 rounded-lg text-text-primary font-mono focus:border-neon-primary/60 focus:outline-none transition-all duration-300"
                       placeholder="your.email@domain.com"
                     />
@@ -136,10 +140,11 @@ const Contact = () => {
 
                   {/* Message Input */}
                   <div>
-                    <label className="block text-neon-secondary font-mono text-sm mb-2">
+                    <label htmlFor="message" className="block text-neon-secondary font-mono text-sm mb-2">
                       {'> MESSAGE_DATA:'}
                     </label>
                     <textarea
+                      id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
