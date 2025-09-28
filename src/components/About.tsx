@@ -138,15 +138,15 @@ const About = () => {
                 </div>
 
                 {/* Placeholder Content */}
-                <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
-                  <User size={80} className="text-neon-primary/60 mb-4" />
-                  <div className="text-text-primary/60 font-mono text-sm">
-                    {'// Portrait coming soon'}
-                  </div>
-                  <div className="text-neon-secondary font-mono text-xs mt-2">
-                    {'<Mad Scientist Mode />'}
-                  </div>
-                </div>
+                <div className="relative z-10 h-full flex flex-col justify-center items-center">
+                  <motion.img
+                    src="/profile-pic.png"
+                    alt='Bisika Pant'
+                    className="w-4/5 h-4/5 object-cover rounded-xl border-2 border-neon-primary/50"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  /> 
+                </div>   
 
                 {/* Corner Decorations */}
                 <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-neon-primary/50"></div>
