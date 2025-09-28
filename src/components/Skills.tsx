@@ -48,8 +48,17 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-section-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 bg-section-bg relative overflow-hidden">
+      {/* Background Avatar */}
+      <div className="absolute bottom-10 left-10 opacity-15 pointer-events-none">
+        <img 
+          src="./avatars/2.png" 
+          alt="" 
+          className="w-64 h-64 object-cover rounded-full"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}

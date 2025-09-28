@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { Send, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, Github, Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -36,10 +36,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-gray-400' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-blue-400' },
-    { icon: Mail, href: 'mailto:bisika@example.com', label: 'Email', color: 'hover:text-red-400' },
+    { icon: Github, href: 'https://github.com/codemuse-bcka777', label: 'GitHub', color: 'hover:text-gray-400' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/bisika-pant-777codemuse', label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { icon: Instagram, href: 'https://www.instagram.com/bisika_artfolio/', label: 'Instagram', color: 'hover:text-pink-400' },
+    { icon: Mail, href: 'mailto:pantbisika159@gmail.com', label: 'Email', color: 'hover:text-red-400' },
   ];
 
   const containerVariants = {
@@ -65,8 +65,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-section-bg">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-section-bg relative overflow-hidden">
+      {/* Background Avatar */}
+      <div className="absolute top-20 right-20 opacity-15 pointer-events-none">
+        <img 
+          src="./avatars/10.png" 
+          alt="" 
+          className="w-64 h-64 object-cover rounded-full"
+        />
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -202,7 +211,7 @@ const Contact = () => {
                     <Mail size={20} className="text-neon-primary" />
                     <div>
                       <div className="text-sm font-mono text-neon-secondary opacity-60">EMAIL_PROTOCOL:</div>
-                      <div className="text-text-primary">bisika@example.com</div>
+                      <div className="text-text-primary">pantbisika159@gmail.com</div>
                     </div>
                   </div>
                   
