@@ -36,7 +36,7 @@ export const submitContactMessage = async (formData: ContactFormData): Promise<s
     console.log('🔗 Database instance:', db.app.name);
     
     // Try to add the document
-    const docRef = await addDoc(collection(db, 'contactMessages'), messageData);
+    const docRef = await addDoc(collection(db, 'contact-messages'), messageData);
     console.log('✅ Successfully submitted to Firestore with ID:', docRef.id);
     
     return docRef.id;
