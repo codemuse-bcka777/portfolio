@@ -91,15 +91,7 @@ const Contact = () => {
       // Reset form
       setFormData({ name: '', email: '', message: '' });
       
-      // Also open email as backup (optional)
-      const subject = encodeURIComponent(`Portfolio Contact: Message from ${formData.name}`);
-      const body = encodeURIComponent(`Hi Bisika,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nSent from your portfolio contact form.`);
-      const mailtoLink = `mailto:pantbisika159@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Open email client after a short delay
-      setTimeout(() => {
-        window.open(mailtoLink, '_blank');
-      }, 1000);
+      // Database submission succeeded - no need for email fallback
       
     } catch (error) {
       // Clear timeout
