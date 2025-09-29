@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://codemuse-bcka777.github.io/portfolio/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /.git/

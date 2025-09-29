@@ -19,8 +19,8 @@ const Skills = () => {
       color: 'neon-secondary'
     },
     {
-      title: 'Creative Skills',
-      skills: ['Digital Painting', 'Figma', 'Canva','UI/UX Design', 'Brand  Design'],
+      title: 'Creative & Digital Marketing',
+      skills: ['Digital Painting', 'Figma', 'Canva','UI/UX Design', 'Brand Design', 'SEO Optimization'],
       color: 'neon-primary'
     }
   ];
@@ -50,10 +50,14 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-section-bg relative overflow-hidden">
       {/* Background Avatar */}
-      <div className="absolute bottom-10 left-10 opacity-15 pointer-events-none">
+      <div className="absolute bottom-20 left-10 opacity-15 pointer-events-none">
         <img 
-          src="./avatars/2.png" 
-          alt="" 
+          src="./avatars/5.png" 
+          alt="Bisika Pant technical skills avatar - programming and AI expertise background" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
           className="w-64 h-64 object-cover rounded-full"
         />
       </div>

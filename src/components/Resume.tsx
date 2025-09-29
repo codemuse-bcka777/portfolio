@@ -46,12 +46,16 @@ const Resume = () => {
   };
 
   return (
-    <section id="resume" className="py-20 bg-dark-bg relative overflow-hidden">
+    <section id="resume" className="py-20 bg-section-bg relative overflow-hidden">
       {/* Background Avatar */}
       <div className="absolute bottom-20 right-20 opacity-10 pointer-events-none">
         <img 
           src="./avatars/5.png" 
-          alt="" 
+          alt="Bisika Pant resume download avatar - professional CV background element" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
           className="w-64 h-64 object-cover rounded-full"
         />
       </div>
@@ -126,35 +130,13 @@ const Resume = () => {
                   {'// Last updated: September 2025'}
                 </p>
                 <p className="text-text-primary/60 text-sm font-mono mt-1">
-                  {'// Format: PDF | Size: ~200KB'}
+                  {'// Format: PDF | Size: ~100 KB'}
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Quick Highlights */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {[
-              { label: 'Experience', value: '3+ Years' },
-              { label: 'Projects', value: '15+ Completed' },
-              { label: 'Skills', value: '20+ Technologies' }
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-section-bg/50 rounded-lg border border-neon-primary/10"
-              >
-                <div className="text-2xl font-bold text-neon-primary font-mono mb-2">
-                  {item.value}
-                </div>
-                <div className="text-text-primary/70 font-mono text-sm">
-                  {item.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
+
         </motion.div>
       </div>
     </section>

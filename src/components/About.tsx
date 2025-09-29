@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { User, Zap, Palette, Brain, Puzzle, Beaker, Anchor, BookCheckIcon } from 'lucide-react';
+import { Puzzle, Beaker, Anchor, BookCheckIcon } from 'lucide-react';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -55,8 +55,21 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-section-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" role="main" className="py-20 bg-section-bg relative overflow-hidden">
+      {/* Background Avatar */}
+      <div className="absolute top-10 left-10 opacity-15 pointer-events-none">
+        <img 
+          src="./avatars/6.png" 
+          alt="Bisika Pant professional avatar - data scientist and AI engineer background element" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
+          className="w-64 h-64 object-cover rounded-full"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -158,7 +171,10 @@ const About = () => {
                 <div className="relative z-10 h-full flex justify-center items-center">
                   <motion.img
                     src="/portfolio/profile-pic.png"
-                    alt="Bisika Pant"
+                    alt="Bisika Pant - Data Scientist, AI Engineer, and Digital Artist professional headshot"
+                    loading="eager"
+                    width="400"
+                    height="400"
                     className="w-full h-full object-cover rounded-xl"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}

@@ -55,8 +55,21 @@ const Achievements = () => {
   };
 
   return (
-    <section id="achievements" className="py-20 bg-dark-bg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="achievements" className="py-20 bg-dark-bg relative overflow-hidden">
+      {/* Background Avatar */}
+      <div className="absolute bottom-10 right-10 opacity-15 pointer-events-none">
+        <img 
+          src="./avatars/8.png" 
+          alt="Bisika Pant achievements avatar - AI Olympiad medal winner background element" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
+          className="w-64 h-64 object-cover rounded-full"
+        />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}

@@ -65,12 +65,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-section-bg relative overflow-hidden">
+    <section id="contact" role="region" aria-label="Contact Information" className="py-20 bg-dark-bg relative overflow-hidden">
       {/* Background Avatar */}
-      <div className="absolute top-20 right-20 opacity-15 pointer-events-none">
+      <div className="absolute top-20 left-20 opacity-15 pointer-events-none">
         <img 
           src="./avatars/10.png" 
-          alt="" 
+          alt="Bisika Pant profile avatar - decorative background element" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
           className="w-64 h-64 object-cover rounded-full"
         />
       </div>

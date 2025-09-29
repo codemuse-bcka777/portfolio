@@ -14,7 +14,7 @@ const Projects = () => {
       description: 'Advanced machine learning model that analyzes user preferences and viewing history to provide personalized content recommendations.',
       tech: ['Python', 'Pandas', 'Scikit-learn', 'Collaborative Filtering'],
       icon: Zap,
-      github: '#',
+      github: 'https://github.com/codemuse-bcka777/netflix-recommendation-system',
       demo: '#',
       glowColor: 'neon-primary'
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       description: 'Deep learning model trained on social media data to classify emotions and sentiment polarity with high accuracy.',
       tech: ['Python', 'TensorFlow', 'NLTK', 'Neural Networks'],
       icon: Brain,
-      github: '#',
+      github: null, // Large files - not available on GitHub
       demo: '#',
       glowColor: 'neon-secondary'
     },
@@ -32,7 +32,7 @@ const Projects = () => {
       description: 'Intelligent email classifier using NLP and machine learning to identify and filter spam emails with 98% accuracy.',
       tech: ['Python', 'NLP', 'SVM', 'Feature Engineering'],
       icon: Shield,
-      github: '#',
+      github: 'https://github.com/codemuse-bcka777/spamdetection',
       demo: '#',
       glowColor: 'neon-primary'
     },
@@ -41,8 +41,8 @@ const Projects = () => {
       description: 'Computer vision application that diagnoses plant diseases from leaf images, helping farmers make informed decisions.',
       tech: ['Python', 'CNN', 'OpenCV', 'Image Processing'],
       icon: Leaf,
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/Plant-MD',
+      demo: 'https://www.plantmd.xyz/',
       glowColor: 'neon-secondary'
     }
   ];
@@ -72,10 +72,14 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-dark-bg relative overflow-hidden">
       {/* Background Avatar */}
-      <div className="absolute top-10 right-10 opacity-15 pointer-events-none">
+      <div className="absolute top-20 right-10 opacity-15 pointer-events-none">
         <img 
           src="./avatars/3.png" 
-          alt="" 
+          alt="Bisika Pant avatar showcasing machine learning and AI projects background" 
+          loading="lazy"
+          decoding="async"
+          width="256"
+          height="256"
           className="w-64 h-64 object-cover rounded-full"
         />
       </div>
@@ -120,22 +124,26 @@ const Projects = () => {
                     
                     {/* Links */}
                     <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <motion.a
-                        href={project.github}
-                        className="p-2 bg-dark-bg rounded-lg border border-neon-primary/30 text-text-primary hover:text-neon-primary hover:border-neon-primary/60 transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github size={16} />
-                      </motion.a>
-                      <motion.a
-                        href={project.demo}
-                        className="p-2 bg-dark-bg rounded-lg border border-neon-secondary/30 text-text-primary hover:text-neon-secondary hover:border-neon-secondary/60 transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink size={16} />
-                      </motion.a>
+                      {project.github && (
+                        <motion.a
+                          href={project.github}
+                          className="p-2 bg-dark-bg rounded-lg border border-neon-primary/30 text-text-primary hover:text-neon-primary hover:border-neon-primary/60 transition-all duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Github size={16} />
+                        </motion.a>
+                      )}
+                      {project.demo && project.demo !== '#' && (
+                        <motion.a
+                          href={project.demo}
+                          className="p-2 bg-dark-bg rounded-lg border border-neon-secondary/30 text-text-primary hover:text-neon-secondary hover:border-neon-secondary/60 transition-all duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <ExternalLink size={16} />
+                        </motion.a>
+                      )}
                     </div>
                   </div>
 

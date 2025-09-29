@@ -16,7 +16,7 @@ const Footer = () => {
             </motion.div>
             <div className="w-px h-6 bg-neon-primary/30"></div>
             <div className="text-text-primary/60 font-mono text-sm">
-              {'v2024.1.0'}
+              {'v2025.1.0'}
             </div>
           </div>
 

@@ -21,7 +21,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen bg-dark-bg relative overflow-hidden">
+    <section id="home" role="banner" className="min-h-screen bg-dark-bg relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
