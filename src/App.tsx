@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
+import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ function App() {
       <Projects />
       <Skills />
       <Achievements />
+      <Resume />
       <Contact />
       <Footer />
     </motion.div>

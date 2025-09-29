@@ -4,7 +4,7 @@ import { ArrowDown, Play } from 'lucide-react';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = "Hi, I'm Bisika_\nData Scientist | AI Explorer | Digital Artist";
+  const fullText = "Hi, I'm Bisika_\n Evolving Data Scientist | AI Explorer | Digital Artist";
   
   useEffect(() => {
     let currentIndex = 0;
@@ -70,7 +70,7 @@ const Hero = () => {
           className="mb-8"
         >
           <div className="font-mono text-lg md:text-xl mb-4 text-neon-secondary">
-            {'> Initializing mad_scientist.exe...'}
+            {'> Initializing Bisika.exe...'}
           </div>
           
           <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-8 leading-tight">

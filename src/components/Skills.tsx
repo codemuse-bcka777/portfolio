@@ -10,17 +10,17 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages & Tools',
-      skills: ['Python', 'R', 'SQL', 'JavaScript', 'React', 'Tailwind', 'Next.js', 'Kaggle', 'Colab'],
+      skills: ['Python', 'SQL', 'JavaScript', 'React', 'Tailwind', 'Next.js'],
       color: 'neon-primary'
     },
     {
       title: 'AI & Machine Learning',
-      skills: ['Data Science', 'Deep Learning', 'Data Visualization', 'Neural Networks', 'NLP', 'Computer Vision'],
+      skills: ['Data Science', 'Deep Learning', 'Data Visualization', 'Neural Networks', 'NLP', 'Machine Learning'],
       color: 'neon-secondary'
     },
     {
       title: 'Creative Skills',
-      skills: ['Digital Painting', 'Figma', 'UI/UX Design', 'Creative Problem Solving'],
+      skills: ['Digital Painting', 'Figma', 'Canva','UI/UX Design', 'Brand  Design'],
       color: 'neon-primary'
     }
   ];

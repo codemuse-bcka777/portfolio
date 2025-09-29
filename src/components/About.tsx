@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { User, Zap, Palette, Brain } from 'lucide-react';
+import { User, Zap, Palette, Brain, Puzzle, Beaker, Anchor, BookCheckIcon } from 'lucide-react';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -31,10 +31,27 @@ const About = () => {
   };
 
   const highlights = [
-    { icon: Brain, text: 'Aspiring Data Scientist', color: 'neon-primary' },
-    { icon: Zap, text: 'Bronze Medalist at National AI Olympiad', color: 'neon-secondary' },
-    { icon: User, text: 'Passion for AI, coding, math, and digital painting', color: 'neon-primary' },
-    { icon: Palette, text: 'Strong believer in self-education and practical learning', color: 'neon-secondary' },
+    { 
+  icon: Puzzle, 
+  text: "I treat problems like strange puzzles from another dimension — each one begging to be dismantled, reassembled, and occasionally electrified until it reveals its hidden truth.", 
+  color: "neon-primary" 
+},
+{ 
+  icon: Beaker, 
+  text: "My experiments in code are so consuming that time itself becomes irrelevant. Once I glanced at the clock — 10AM. The next blink? 7PM. The universe paused while I was lost inside the experiment.", 
+  color: "neon-secondary" 
+},
+{ 
+  icon: Anchor, 
+  text: "My greatest invention isn’t an algorithm or a model — it’s discipline. The ability to chain myself to the workbench of consistency until visions spark into reality.", 
+  color: "neon-primary" 
+},
+{ 
+  icon: BookCheckIcon, 
+  text: "Degrees? Certificates? Merely decorative labels. My creed is self-education through trial, error, and relentless curiosity. Real knowledge is forged in the flames of practice.", 
+  color: "neon-secondary" 
+}
+,
   ];
 
   return (
@@ -67,7 +84,7 @@ const About = () => {
               className="text-lg text-text-primary/90 leading-relaxed"
               variants={itemVariants}
             >
-              Welcome to my digital laboratory! I'm a passionate data scientist who believes that the intersection of technology and creativity holds the key to solving tomorrow's challenges.
+             Welcome to my Laboratory! I am Bisika — an architect of ideas, a tinkerer of patterns, and a rebel who delights in breaking the ordinary apart to see what secrets lie within. To me, life is both an equation to be hacked and a masterpiece to be painted, where logic and imagination clash, merge, and spark something entirely new.
             </motion.p>
 
             <motion.div className="space-y-4" variants={itemVariants}>
